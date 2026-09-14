@@ -1,10 +1,11 @@
 @charset "utf-8";
+@import url('https://fonts.googleapis.com/css2?family=Vazirmatn:wght@300;400;500;700&display=swap');
 *{
 	margin:0 auto;
 	padding:0;
 	border:none;
 }
-@import url('https://fonts.googleapis.com/css2?family=Vazirmatn:wght@300;400;500;700&display=swap');
+
 p{
 	direction:rtl;
 }
@@ -151,15 +152,31 @@ nav li:hover > ul {
 	min-height:300px;
  }
 
- .futurp{
-    text-align:center;
-	font-size:24px;
-	color: #121212;
-	margin:30px;
-	border-bottom:2px solid #230802;
-	border-top:2px solid #230802;
-	padding: 10px 0;
- }
+.section-container {
+    width: 100%;
+    margin: 30px auto;
+}
+
+.section-header {
+    width: 100% !important;
+    text-align: center !important;
+    margin: 30px auto 20px auto !important;
+    justify-content: center !important;
+    align-items: center !important;
+    gap: 12px !important;
+	border-bottom:2px solid #9A111A; 
+}
+
+.section-title {
+    display: inline-block !important;
+    text-align: center !important;
+    width: auto !important;
+    margin: 0 !important;
+    font-size: 1.4rem !important;
+    font-weight: 700 !important;
+    color: #2c3e50 !important;
+    border: none !important;
+}
  #imageslideshow1{
     margin-top:20px;
     border:2px solid #230802;
