@@ -24,13 +24,16 @@ body{
 	height:200px;
 }
 #headerimg{
-	width:1000px;
+	width:100%;
+	maxwidth: 1200px;
 	height:200px;
+	border-radius: 8px;
 }
 ul,ol{
     list-style:none;
 	position:relative;
 	z-index:99999;
+	
 }
 ul{
    direction:rtl;
@@ -123,18 +126,21 @@ nav li:hover > ul {
     border-radius: 8px;
 }
  #main{
-	width:1000px; 
+	width:90%; 
+	max-width: 1200px;
+	margin:0 auto;
 	text-align:center;
 	min-height:300px;
  }
 
  .futurp{
-    text-align:right;
+    text-align:center;
 	font-size:24px;
 	color: #121212;
 	margin:30px;
 	border-bottom:2px solid #230802;
 	border-top:2px solid #230802;
+	padding: 10px 0;
  }
  #imageslideshow1{
     margin-top:20px;
