@@ -14,11 +14,11 @@ body{
 	font-family: 'Vazirmatn', Tahoma, Arial, sans-serif;
 }
 #container{
-     max-width: 1100px;
+     max-width: 1200px;
 	 width: 100%;
 	 border-radius: 8px;
 	 box-shadow: 0 4px 15px rgba(0, 0, 0, 0.15);	
-	 background-color:#d0a356;
+	 background-color: #263238;
 	 direction:rtl;
 }
 #header{
@@ -31,15 +31,13 @@ body{
 	height:200px;
 	border-radius: 8px;
 }
-ul,ol{
+ul,li{
     list-style:none;
 	position:relative;
-	z-index:99999;
 	
 }
 ul{
    direction:rtl;
-   text-align:center;
 }
 .nav{
 	width: 180px;
@@ -47,9 +45,10 @@ ul{
 	line-height: 50px;
 	direction: rtl;
 	display: inline-block;
-	border: 1px solid #887765;
+	border: 1px solid #d4a343;
 	margin-left: -5px;
-	background-image: linear-gradient(180deg,rgba(171,133,52,0.85) 0%,rgba(130,92,11,1.00) 100%);
+	background-image: llinear-gradient(180deg, #cda243 0%, #8f6217 100%);
+    box-shadow: 0 2px 6px rgba(0, 0, 0, 0.2);
 	transition: all 0.3s ease;
 }
 
@@ -60,15 +59,16 @@ ul{
 	direction: rtl;
 	border: 1px solid #887765;
 	margin-left: -5px;
-	background-image: linear-gradient(180deg,rgba(171,133,52,0.85) 0%,rgba(130,92,11,1.00) 100%);
-	border-radius:0 8px 8px 0;
+	background-image: background-image: linear-gradient(180deg, #cda243 0%, #8f6217 100%);
 	transition: all 0.3s ease;
+	border-radius:8px 8px 8px 8px;
 }
 nav ul{
 	list-style: none;
     margin: 0;
     padding: 10px 0px 0px;
     position: relative;
+	text-align:center;
 }
 nav > ul > li {
     display: inline-block;
@@ -76,7 +76,8 @@ nav > ul > li {
 }
 .nav a:link,
      a:visited{
-		 color:#121212;
+		 color: #ffffff;
+		 text-shadow: 1px 1px 2px rgba(0, 0, 0, 0.5);;
 		 text-decoration:none;
 		 font-size:20px;
 		 text-align:center;
@@ -88,9 +89,11 @@ nav > ul > li {
  .nav:nth-child(4){
 	 border-radius:8px 0 0 8px;
  }
+ .nav a:hover{
+	 background-image: linear-gradient(180deg, #dfb353 0%, #9e6e1c 100%);
+ }
  nav a:hover{
-	 color:#912c10;
-	
+	 color:#fff4d0;;	
  }
  ul{
    display:block;
@@ -174,7 +177,7 @@ nav li:hover > ul {
     margin: 0 !important;
     font-size: 1.4rem !important;
     font-weight: 700 !important;
-    color: #2c3e50 !important;
+    color: #ffffff !important;
     border: none !important;
 }
  #imageslideshow1{
@@ -260,17 +263,98 @@ nav li:hover > ul {
     background: #d35400;
 	color: #ffffff !important;
 }
-#footer{
-border-top:2px solid #230802; 
-  width:960px;
-  padding-top:10px;
+.site-footer {
+  background-color: #263238; 
+  color: #eceff1;
+  padding-top: 40px;
+  margin-top: 50px;
+  font-family: 'Vazirmatn', sans-serif;
+  border-top: 4px solid #B71C1C; 
 }
-.boxfooter{
-  width:208px;
-  height:300px;
-  display:inline-block;
-  border-left:2px dotted #230802;
+
+.footer-container {
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 0 20px;
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-between;
+  gap: 30px;
+  direction:rtl;
 }
+
+.footer-col {
+  flex:2;
+  min-width: 250px;
+}
+
+.footer-col h3 {
+  color: #ffffff;
+  font-size: 1.2rem;
+  margin-bottom: 20px;
+  position: relative;
+  padding-bottom: 8px;
+}
+
+.footer-col h3::after {
+  content: '';
+  position: absolute;
+  bottom: 0;
+  right: 0;
+  width: 40px;
+  height: 3px;
+  background-color: #B71C1C;
+  border-radius: 2px;
+}
+
+.footer-col p {
+  line-height: 1.8;
+  color: #cfd8dc;
+  font-size: 0.95rem;
+}
+
+.footer-col ul {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+}
+
+.footer-col ul li {
+  margin-bottom: 5px;
+}
+
+.footer-col ul li a {
+  color: #cfd8dc;
+  text-decoration: none;
+  transition: color 0.3s ease, padding-right 0.3s ease;
+  font-size: 0.95rem;
+}
+
+.footer-col ul li a:hover {
+  color: #ffffff;
+  padding-right: 6px; 
+}
+
+.contact-info li {
+  color: #cfd8dc;
+  font-size: 0.95rem;
+  line-height: 1.6;
+}
+
+.footer-bottom {
+  background-color: #1c2429;
+  text-align: right;
+  padding: 15px 20px;
+  margin-top: 40px;
+  border-top: 1px solid #37474f;
+}
+
+.footer-bottom p {
+  margin: 0;
+  font-size: 0.85rem;
+  color: #90a4ae;
+}
+
 a.folink:link,
 a.folink:visited{
   text-decoration:none;
@@ -279,13 +363,7 @@ a.folink:visited{
   position:relative;
   top:-22px;
 }
-.pfooter{
-	 color:#121212;
-	 font-size:14px;
-	 text-align:center;
-	margin:30px;
-	text-decoration:none;
-}
+
 h3{
 color:#121212;
 text-align:center;
