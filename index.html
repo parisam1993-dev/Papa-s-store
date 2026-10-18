@@ -15,9 +15,13 @@
 
 <body>
   <div id="container">
-    <header>
-     <img src="images/header.jpg"id="headerimg"alt="فروشگاه ابزارآلات تک عمران">
-    </header>
+    
+    <div class="search-section">
+  <form class="search-form" action="#" method="get">
+    <input type="text" placeholder="جستجوی نام ابزار، ژنراتور، برند..." class="search-input">
+    <button type="submit" class="search-btn">جستجو</button>
+  </form>
+</div>
     <nav>
     <ul>
      <li class="nav"><a href="index.html">صفحه اصلی</a></li>
@@ -121,16 +125,47 @@
        </div>
       </div>
      </section>
+      <section class="brands-section">
+  <div class="brands-header">
+    <h3>برندهای معتبر و همکار</h3>
+    <p>تضمین کیفیت با برترین تولیدکنندگان ابزارآلات صنعتی</p>
+  </div>
+  
+  <div class="brands-grid">
+    <div class="brand-item">
+      <span class="brand-name">BOSCH</span>
+      <span class="brand-sub">بوش</span>
+    </div>
+    <div class="brand-item">
+      <span class="brand-name">MAKITA</span>
+      <span class="brand-sub">ماکیتا</span>
+    </div>
+    <div class="brand-item">
+      <span class="brand-name">RONIX</span>
+      <span class="brand-sub">رونیکس</span>
+    </div>
+    <div class="brand-item">
+      <span class="brand-name">DEWALT</span>
+      <span class="brand-sub">دیوالت</span>
+    </div>
+    <div class="brand-item">
+      <span class="brand-name">TOSAN</span>
+      <span class="brand-sub">توسن</span>
+    </div>
+  </div>
+</section>
    </main>
    </div>
    <footer class="site-footer">
   <div class="footer-container">
+    
+    <!-- ستون اول: درباره فروشگاه -->
     <div class="footer-col">
       <h3>فروشگاه تک عمران</h3>
-      <p>
-        ارائه‌دهنده انواع موتور برق، ابزارآلات صنعتی و تجهیزات کارگاهی با بالاترین کیفیت و ضمانت معتبر. 
-      </p>
+      <p>ارائه‌دهنده انواع موتور برق، ابزارآلات صنعتی و تجهیزات کارگاهی با بالاترین کیفیت و ضمانت معتبر.</p>
     </div>
+
+    <!-- ستون دوم: دسترسی سریع -->
     <div class="footer-col">
       <h3>دسترسی سریع</h3>
       <ul>
@@ -139,6 +174,8 @@
         <li><a href="pages/contact.html">تماس با ما</a></li>
       </ul>
     </div>
+
+    <!-- ستون سوم: ارتباط با ما -->
     <div class="footer-col">
       <h3>ارتباط با ما</h3>
       <ul class="contact-info">
@@ -149,8 +186,9 @@
     </div>
 
   </div>
+
   <div class="footer-bottom">
-    <p>© ۱۴۰۵ تمامی حقوق متعلق به فروشگاه پاپا می‌باشد.</p>
+    <p>© کلیه حقوق مادی و معنوی برای فروشگاه تک عمران محفوظ است.</p>
   </div>
 </footer>
 <script src="js/script.js"></script>
