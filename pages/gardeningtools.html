@@ -4,33 +4,17 @@
 <meta charset="utf-8">
 <meta name="author" content="Parisa M"/>
  <link rel="stylesheet" type="text/css" href="../css/mycss.css"/>
- 
-    <style>
-          
-		 .pcontact{
-			 font-size:20px;
-			 color:#09245B;
-			 text-align:right;
-			 line-height:45px;
-		 }
-		  .btn{
-			 width:100px;
-			 height:30px;
-			 font-weight:bold;
-			  transition:all 1s ease;
-		 }
-		 .btn:hover{
-			 color:#B1D9FD;
-			 background-color:#230802;
-			 transition:all 1s ease;
-			 border-radius:8px;
-		 }
-  </style>
 <title>Gardening Tools</title>
 </head>
 
 <body>
   <div id="container">
+    <div class="search-section">
+  <form class="search-form" action="#" method="get">
+    <input type="text" placeholder="جستجوی نام ابزار، ژنراتور، برند..." class="search-input">
+    <button type="submit" class="search-btn">جستجو</button>
+  </form>
+</div>
     <nav>
     <ul>
      <li class="nav"><a href="../Index.html">صفحه اصلی</a></li>
@@ -49,14 +33,60 @@
 	  <li class="nav"><a href="orders.html"id="order">پذیرش سفارشات</a></li>
    </ul>
    </nav>
-   <main id="main">
-    <p class="futurp">لوازم باغبانی</p>
-      <img src="../images/are.jpg"class="mainimg"><div style="font-size:20px;font-weight:bold" >انوع اره</div>
-      <img src="../images/gheichi.jpg"class="mainimg"><div style="font-size:20px;font-weight:bold" >قیچی باغبانی</div>
-      <img src="../images/bilche.jpg"class="mainimg"><div style="font-size:20px;font-weight:bold" >بیلچه</div>
-      <img src="../images/das.jpg"class="mainimg"><div style="font-size:20px;font-weight:bold" >انواع داس</div>
-      <img src="../images/tabar.jpg"class="mainimg"><div style="font-size:20px;font-weight:bold;padding-bottom:30px" >تبر</div>
-   </main>
+  <main class="category-page">
+      <header class="category-header">
+        <span class="category-eyebrow">دسته‌بندی محصولات</span>
+        <h1>لوازم باغبانی</h1>
+        <p>ابزارهای موردنیاز برای رسیدگی به باغ و فضای سبز</p>
+      </header>
+
+      <div class="category-grid">
+        <div class="item-card">
+          <div class="item-image">
+            <img src="../images/are.jpg" alt="انواع اره">
+          </div>
+          <div class="item-content">
+            <h2>انواع اره</h2>
+          </div>
+        </div>
+
+        <div class="item-card">
+          <div class="item-image">
+            <img src="../images/gheichi.jpg" alt="قیچی باغبانی">
+          </div>
+          <div class="item-content">
+            <h2>قیچی باغبانی</h2>
+          </div>
+        </div>
+
+        <div class="item-card">
+          <div class="item-image">
+            <img src="../images/bilche.jpg" alt="بیلچه">
+          </div>
+          <div class="item-content">
+            <h2>بیلچه</h2>
+          </div>
+        </div>
+
+        <div class="item-card">
+          <div class="item-image">
+            <img src="../images/das.jpg" alt="انواع داس">
+          </div>
+          <div class="item-content">
+            <h2>انواع داس</h2>
+          </div>
+        </div>
+
+        <div class="item-card">
+          <div class="item-image">
+            <img src="../images/tabar.jpg" alt="تبر">
+          </div>
+          <div class="item-content">
+            <h2>تبر</h2>
+          </div>
+        </div>
+      </div>
+    </main>
   
    </div>
    <footer class="site-footer">

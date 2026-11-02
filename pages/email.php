@@ -1,41 +1,43 @@
 ﻿<?php
-//--------------------------Set these paramaters--------------------------
+// تنظیمات اصلی فرم تماس
+$subject = 'پیام جدید از وب‌سایت پاپا استور';
+$emailadd = 'pari.1993@ymail.com';
+$url = 'send.html'; // صفحه‌ای که بعد از ارسال موفق نمایش داده می‌شود
+$req = '0'; // 0 یعنی اجباری نبودن فیلدها، 1 یعنی اجباری
 
-// Subject of email sent to you.
-$subject = 'فرم تماس';
-
-// Your email address. This is where the form information will be sent.
-$emailadd = 'takomran@gmail.com';
-
-// Where to redirect after form is processed.
-$url = 'send.html';
-
-// Makes all fields required. If set to '1' no field can not be empty. If set to '0' any or all fields can be empty.
-$req = '0';
-
-// --------------------------Do not edit below this line--------------------------
-$text = "\n\n";
+$text = "اطلاعات فرم ارسال شده از وب‌سایت:\n\n";
+$line = "\r\n";
 $space = ' ';
-$line = '
-';
-foreach ($_POST as $key => $value)
-{
-if ($req == '1')
-{
-if ($value == '')
-{echo "$key is empty";die;}
+
+foreach ($_POST as $key => $value) {
+    // پاکسازی ورودی‌ها برای امنیت
+    $key = htmlspecialchars(trim($key), ENT_QUOTES, 'UTF-8');
+    $value = htmlspecialchars(trim($value), ENT_QUOTES, 'UTF-8');
+
+    if ($req == '1' && $value == '') {
+        echo "فیلد $key خالی است.";
+        die;
+    }
+    
+    $j = strlen($key);
+    if ($j >= 30) {
+        echo "نام فیلد $key نمی‌تواند بیشتر از 30 کاراکتر باشد";
+        die;
+    }
+    
+    $text .= "{$key}: {$value}{$line}";
 }
-$j = strlen($key);
-if ($j >= 20)
-{echo "Name of form element $key cannot be longer than 20 characters";die;}
-$j = 20 - $j;
-for ($i = 1; $i <= $j; $i++)
-{$space .= ' ';}
-$value = str_replace('\n', "$line", $value);
-$conc = "{$key}:$space{$value}$line";
-$text .= $conc;
-$space = ' ';
-}
-mail($emailadd, $subject, $text, 'From: '.$emailadd.'');
-echo '<META HTTP-EQUIV=Refresh CONTENT="0; URL='.$url.'">';
+
+// تنظیم هدرهای ایمیل برای پشتیبانی کامل از زبان فارسی (UTF-8)
+$headers  = "MIME-Version: 1.0" . "\r\n";
+$headers .= "Content-type: text/plain; charset=UTF-8" . "\r\n";
+$headers .= "From: webmaster@yourdomain.com" . "\r\n"; // بهتر است ایمیل هاست باشد یا خود ایمیل سایت
+$headers .= "Reply-To: " . $emailadd . "\r\n";
+
+// ارسال ایمیل
+@mail($emailadd, $subject, $text, $headers);
+
+// انتقال کاربر به صفحه تایید ارسال
+echo '<META HTTP-EQUIV=Refresh CONTENT="0; URL=' . $url . '">';
+exit;
 ?>

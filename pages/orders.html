@@ -9,6 +9,12 @@
 
 <body>
   <div id="container">
+    <div class="search-section">
+  <form class="search-form" action="#" method="get">
+    <input type="text" placeholder="جستجوی نام ابزار، ژنراتور، برند..." class="search-input">
+    <button type="submit" class="search-btn">جستجو</button>
+  </form>
+</div>
     <nav>
     <ul>
      <li class="nav"><a href="../Index.html">صفحه اصلی</a></li>
@@ -27,12 +33,104 @@
 	  <li class="nav"><a href="orders.html"id="order">پذیرش سفارشات</a></li>
    </ul>
    </nav>
-   <main id="main">
-     <p class="futurp">پذیرش سفارشات</p>
-         <p style="text-align:center;font-size:24px;direction:rtl">فروشگاه تک عمران آماده پذیرش سفارشات شما با نازلترین قیمت و بهترین کیفیت و تحویل در اسرع وقت، می باشد.</p>
-		 <a href="contact.html" style="text-decoration:none;"><p id="box1" >جهت سفارش کلیک کنید</p></a>
-   </main>
-   >
+   <main class="orders-page-container">
+    <div class="page-header">
+      <h1 class="page-title">پذیرش سفارش و استعلام قیمت تجهیزات</h1>
+      <p class="page-subtitle">تک عمران آماده تأمین انواع موتور برق، ادوات کارگاهی و ابزارآلات صنعتی به صورت جزئی و عمده با بهترین قیمت</p>
+    </div>
+
+    <div class="orders-wrapper">
+      <!-- ستون راست: فرم ثبت سفارش -->
+      <div class="order-form-card">
+        <h3>فرم درخواست پیش‌فاکتور و سفارش</h3>
+        <p class="form-desc">لطفاً مشخصات کالای مورد نظر یا لیست تجهیزات خود را وارد کنید تا کارشناسان فروش در سریع‌ترین زمان پیش‌فاکتور رسمی صادر نمایند.</p>
+
+        <form name="orderForm" method="post" action="email.php" enctype="multipart/form-data" class="styled-form">
+          <div class="form-row-2">
+            <div class="form-group">
+              <label for="customer_name">نام یا نام شرکت / کارگاه:</label>
+              <input type="text" id="customer_name" name="customer_name" placeholder="مثال: کارگاه صنعتی پارس / محمدی" required>
+            </div>
+            <div class="form-group">
+              <label for="customer_phone">شماره همراه (جهت هماهنگی و واتساپ):</label>
+              <input type="tel" id="customer_phone" name="customer_phone" placeholder="۰۹۱۲۳۴۵۶۷۸۹" required>
+            </div>
+          </div>
+
+          <div class="form-row-2">
+            <div class="form-group">
+              <label for="tool_category">دسته‌بندی تجهیزات:</label>
+              <select id="tool_category" name="tool_category" class="styled-select" required>
+                <option value="">انتخاب نوع تجهیزات...</option>
+                <option value="generator">موتور برق و ژنراتور</option>
+                <option value="electric">ابزارآلات برقی و شارژی</option>
+                <option value="pneumatic">ابزارآلات بادی و کمپرسور</option>
+                <option value="welding">لوازم و ترانس جوشکاری</option>
+                <option value="handtools">ابزارآلات دستی و تخصصی</option>
+                <option value="safety">تجهیزات ایمنی و کارگاهی</option>
+                <option value="other">سایر تجهیزات و قطعات یدکی</option>
+              </select>
+            </div>
+            <div class="form-group">
+              <label for="quantity">تعداد تقریبی / حجم سفارش:</label>
+              <input type="text" id="quantity" name="quantity" placeholder="مثال: ۱ دستگاه / ۵ جعبه / خرید عمده">
+            </div>
+          </div>
+
+          <div class="form-group">
+            <label for="order_details">شرح کالا، مشخصات فنی یا مدل مدنظر:</label>
+            <textarea id="order_details" name="order_details" rows="4" placeholder="نام برند (مانند رونیکس، هیوندای و ...)، توان مورد نظر ژنراتور، مدل یا نیازمندی‌های پروژه خود را اینجا یادداشت فرمایید..." required></textarea>
+          </div>
+
+          <div class="form-group">
+            <label for="attachment">پیوست لیست اقلام یا تصویر پیش‌فاکتور (اختیاری):</label>
+            <input type="file" id="attachment" name="attachment" class="file-input">
+            <span class="file-hint">فرمت‌های مجاز: عکس (JPG, PNG) یا فایل PDF (حداکثر ۵ مگابایت)</span>
+          </div>
+
+          <div class="form-actions">
+            <button type="submit" class="btn-submit">ثبت درخواست پیش‌فاکتور</button>
+            <button type="reset" class="btn-reset">پاک کردن</button>
+          </div>
+        </form>
+      </div>
+
+      <!-- ستون چپ: باکس راهنما و مزایای خرید سازمانی/سفارشی -->
+      <div class="order-info-card">
+        <h3>روند بررسی سفارش در تک عمران</h3>
+        
+        <div class="step-item">
+          <div class="step-num">۱</div>
+          <div class="step-text">
+            <strong>ثبت و تفکیک مشخصات</strong>
+            <p>درخواست شما بلافاصله پس از ثبت، به انبار مرکزی و بخش فنی ارجاع داده می‌شود.</p>
+          </div>
+        </div>
+
+        <div class="step-item">
+          <div class="step-num">۲</div>
+          <div class="step-text">
+            <strong>تماس کارشناس فنی و صدور پیش‌فاکتور</strong>
+            <p>حداکثر ظرف ۲ ساعت کاری، بهترین قیمت دست‌اول بازار به همراه زمان‌بندی تحویل به اطلاعتان می‌رسد.</p>
+          </div>
+        </div>
+
+        <div class="step-item">
+          <div class="step-num">۳</div>
+          <div class="step-text">
+            <strong>تست اصالت کالا و ارسال سریع</strong>
+            <p>ارسال به سراسر کشور از طریق باربری، تیپاکس و پیک اختصاصی در سریع‌ترین زمان ممکن انجام می‌شود.</p>
+          </div>
+        </div>
+
+        <div class="order-support-box">
+          <h4>سفارش تلفنی و فوری</h4>
+          <p>برای پروژه‌های پیمانکاری فوری می‌توانید مستقیماً با مدیریت فروش در تماس باشید:</p>
+          <div class="direct-call">📞 ۰۲۱-۱۲۳۴۵۶۷۸</div>
+        </div>
+      </div>
+    </div>
+  </main>
    </div>
    <footer class="site-footer">
   <div class="footer-container">

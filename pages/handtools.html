@@ -9,6 +9,12 @@
 
 <body>
   <div id="container">
+    <div class="search-section">
+  <form class="search-form" action="#" method="get">
+    <input type="text" placeholder="جستجوی نام ابزار، ژنراتور، برند..." class="search-input">
+    <button type="submit" class="search-btn">جستجو</button>
+  </form>
+</div>
     <nav>
     <ul>
      <li class="nav"><a href="../Index.html">صفحه اصلی</a></li>
@@ -27,17 +33,39 @@
 	  <li class="nav"><a href="orders.html"id="order">پذیرش سفارشات</a></li>
    </ul>
    </nav>
-   <main id="main">
-    <p class="futurp">ابزارآلات دستی</p>
-       <a href="wrench.html"class="flink">
-	      <img src="../images/achar.jpg" class="img1">
-          <div class="cover">انواع آچار</div>
-	  </a>
-      <a href="pliers.html"class="flink">
-	      <img src="../images/anbor.jpg" class="img1">
-          <div class="cover">انواع انبر</div>
-	  </a> 
-   </main>
+   <main class="category-page">
+    <header class="category-header">
+      <span class="category-eyebrow">دسته‌بندی محصولات</span>
+      <h1>ابزارآلات دستی</h1>
+      <p>دسته‌بندی موردنظرت را انتخاب کن و ابزارهای آن را ببین.</p>
+    </header>
+
+    <div class="category-grid">
+      <a href="wrench.html" class="item-card">
+        <div class="item-image">
+          <img src="../images/achar.jpg" alt="انواع آچار">
+        </div>
+        <div class="item-content">
+          <h2>انواع آچار</h2>
+          <p>مشاهده دسته‌بندی آچارها</p>
+          <span class="item-link">مشاهده محصولات ←</span>
+        </div>
+      </a>
+
+      <a href="pliers.html" class="item-card">
+        <div class="item-image">
+          <img src="../images/anbor.jpg" alt="انواع انبر">
+        </div>
+        <div class="item-content">
+          <h2>انواع انبر</h2>
+          <p>مشاهده دسته‌بندی انبرها</p>
+          <span class="item-link">مشاهده محصولات ←</span>
+        </div>
+      </a>
+      
+      <!-- آیتم‌های دیگر در آینده اینجا اضافه می‌شوند -->
+    </div>
+  </main>
    </div>
    <footer class="site-footer">
   <div class="footer-container">

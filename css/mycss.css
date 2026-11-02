@@ -714,3 +714,677 @@ body {
   margin-bottom: 0 !important;
   padding-bottom: 20px;          /* یک پدینگ داخلی مناسب برای زیبایی */
 }
+/* ==================== استایل صفحه دسته‌بندی محصولات (products.html) ==================== */
+.categories-page {
+  width: 100% !important;
+  max-width: 1200px !important;
+  margin: 40px auto 60px auto;
+  padding: 0 20px;
+  box-sizing: border-box;
+}
+
+.page-header {
+  text-align: center;
+  margin-bottom: 40px;
+}
+
+.page-title {
+  font-size: 1.8rem;
+  color: #1a1f24;
+  font-weight: 800;
+  margin-bottom: 8px;
+  position: relative;
+  display: inline-block;
+}
+
+.page-title::after {
+  content: '';
+  display: block;
+  width: 50px;
+  height: 3px;
+  background-color: #e67e22;
+  margin: 10px auto 0 auto;
+  border-radius: 2px;
+}
+
+.page-subtitle {
+  color: #64748b;
+  font-size: 0.95rem;
+  margin-top: 6px;
+}
+
+/* شبکه دسته‌بندی‌ها (Grid) */
+.category-grid {
+  display: flex !important;
+  flex-wrap: wrap !important;
+  justify-content: space-between !important;
+  gap: 25px !important;
+  width: 100% !important;
+  box-sizing: border-box !important;
+}
+
+.category-card {
+   width: 280px !important;
+min-width: 280px !important;
+max-width: 280px !important;
+height: 280px !important;
+object-fit: contain !important;
+  background: #ffffff !important;
+  border: 1px solid #e2e8f0 !important;
+  border-radius: 12px !important;
+  overflow: hidden !important;
+  text-decoration: none !important;
+  display: flex !important;
+  flex-direction: column !important;
+  box-sizing: border-box !important;
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.05) !important;
+}
+
+.card-img-wrap {
+  width: 90% !important;
+  height: 90% !important;
+  display: flex !important;
+  align-items: center !important;
+  justify-content: center !important;
+  overflow: hidden !important; /* این خط باعث می‌شود لبه‌های عکس بریده نشود */
+  padding: 8px !important;
+}
+.card-img-wrap img {
+ max-width: 100% !important;
+  max-height: 100% !important;
+  width: auto !important;
+  height: auto !important;
+  object-fit: contain !important;
+  display: block !important;
+  margin: auto !important;
+}
+.category-card img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover !important;
+  transition: transform 0.4s ease;
+}
+
+.category-title {
+  height: 70px !important;
+  display: flex !important;
+  align-items: center !important;
+  justify-content: center !important;
+  padding: 0 10px !important;
+  font-size: 1.05rem !important;
+  font-weight: 700 !important;
+  color: #1e293b !important;
+  background-color: #ffffff !important;
+  border-top: 1px solid #f1f5f9 !important;
+  box-sizing: border-box !important;
+}
+
+/* افکت شناور شدن کارت در زمان هاور ماوس */
+.category-card:hover {
+  transform: translateY(-6px);
+  box-shadow: 0 12px 25px rgba(0, 0, 0, 0.1);
+  border-color: #e67e22;
+}
+
+.category-card:hover img {
+  transform: scale(1.06);
+}
+
+.category-card:hover .category-title {
+  color: #e67e22;
+}
+.category-card img,
+.category-card .img1 {
+  max-width: 100% !important;
+  max-height: 100% !important;
+  width: auto !important;
+  height: auto !important;
+  object-fit: contain !important;
+  display: block !important;
+  margin: auto !important;
+}
+/* ==================== استایل صفحه تماس با ما (contact.html) ==================== */
+.contact-page-container {
+  max-width: 1200px;
+  margin: 40px auto 60px auto;
+  padding: 0 20px;
+  box-sizing: border-box;
+}
+
+.contact-wrapper {
+  display: flex;
+  gap: 30px;
+  align-items: stretch;
+}
+
+/* ستون سمت راست: باکس اطلاعات تماس */
+.contact-info-card {
+  text-align: right !important;
+  flex: 1;
+  background: #ffffff;
+  border-radius: 14px;
+  padding: 35px 30px;
+  box-shadow: 0 4px 18px rgba(0, 0, 0, 0.05);
+  border: 1px solid #e2e8f0;
+  border-top: 4px solid #1e293b;
+  box-sizing: border-box;
+}
+
+.contact-info-card h3 {
+  font-size: 1.3rem;
+  color: #1e293b;
+  margin-bottom: 12px;
+  font-weight: 700;
+}
+
+.info-intro {
+  color: #64748b;
+  font-size: 0.95rem;
+  line-height: 1.8;
+  margin-bottom: 25px;
+}
+
+.info-item {
+ display: flex !important;
+  flex-direction: row !important;
+  align-items: flex-start !important;
+  justify-content: flex-start !important;
+  gap: 16px !important;
+  margin: 0 0 20px 0 !important;
+  padding-bottom: 16px !important;
+  border-bottom: 1px dashed #e2e8f0 !important;
+  width: 100% !important;
+  box-sizing: border-box !important;
+}
+
+.info-item:last-child {
+  border-bottom: none;
+  margin-bottom: 0;
+  padding-bottom: 0;
+}
+
+.info-icon {
+  width: 44px !important;
+  min-width: 44px !important;
+  max-width: 44px !important;
+  height: 44px !important;
+  display: flex !important;
+  align-items: center !important;
+  justify-content: center !important;
+  flex-shrink: 0 !important;
+  margin: 0 !important; /* خنثی کردن margin: 0 auto عمومی */
+  background: #fff7ed !important;
+  border: 1px solid #ffedd5 !important;
+  border-radius: 10px !important;
+  font-size: 1.3rem !important;
+}
+.info-text {
+  flex: 1 !important;
+  text-align: right !important;
+  margin: 0 !important;
+}
+.info-text strong {
+  display: block !important;
+  font-size: 0.95rem !important;
+  color: #1e293b !important;
+  margin: 0 0 4px 0 !important;
+  text-align: right !important;
+}
+
+.info-text p {
+  color: #475569 !important;
+  font-size: 0.9rem !important;
+  line-height: 1.7 !important;
+  margin: 0 !important;
+  text-align: right !important;
+}
+
+/* ستون سمت چپ: فرم ارسال پیام */
+.contact-form-card {
+  flex: 1.3;
+  background: #ffffff;
+  border-radius: 14px;
+  padding: 35px 30px;
+  box-shadow: 0 4px 18px rgba(0, 0, 0, 0.05);
+  border: 1px solid #e2e8f0;
+  border-top: 4px solid #e67e22;
+  box-sizing: border-box;
+}
+
+.contact-form-card h3 {
+  font-size: 1.3rem;
+  color: #1e293b;
+  margin-bottom: 20px;
+  font-weight: 700;
+}
+
+.styled-form .form-group {
+  margin-bottom: 18px;
+  text-align: right;
+}
+
+.styled-form label {
+  display: block;
+  font-size: 0.92rem;
+  font-weight: 600;
+  color: #334155;
+  margin-bottom: 8px;
+}
+
+.styled-form input[type="text"],
+.styled-form input[type="email"],
+.styled-form input[type="tel"],
+.styled-form textarea {
+  width: 100%;
+  padding: 12px 14px;
+  border: 1.5px solid #cbd5e1;
+  border-radius: 8px;
+  font-family: inherit;
+  font-size: 0.95rem;
+  color: #1e293b;
+  background-color: #f8fafc;
+  box-sizing: border-box;
+  transition: all 0.25s ease;
+  outline: none;
+}
+
+.styled-form input:focus,
+.styled-form textarea:focus {
+  background-color: #ffffff;
+  border-color: #e67e22;
+  box-shadow: 0 0 0 3px rgba(230, 126, 34, 0.15);
+}
+
+.styled-form textarea {
+  resize: vertical;
+}
+
+.form-actions {
+  display: flex;
+  gap: 12px;
+  margin-top: 25px;
+}
+
+.btn-submit {
+  background-color: #e67e22;
+  color: #ffffff;
+  border: none;
+  padding: 12px 28px;
+  font-size: 1rem;
+  font-weight: 700;
+  font-family: inherit;
+  border-radius: 8px;
+  cursor: pointer;
+  transition: all 0.25s ease;
+  box-shadow: 0 4px 10px rgba(230, 126, 34, 0.25);
+}
+
+.btn-submit:hover {
+  background-color: #d35400;
+  transform: translateY(-2px);
+  box-shadow: 0 6px 14px rgba(230, 126, 34, 0.35);
+}
+
+.btn-reset {
+  background-color: #f1f5f9;
+  color: #64748b;
+  border: 1px solid #cbd5e1;
+  padding: 12px 20px;
+  font-size: 0.95rem;
+  font-family: inherit;
+  border-radius: 8px;
+  cursor: pointer;
+  transition: all 0.2s ease;
+}
+
+.btn-reset:hover {
+  background-color: #e2e8f0;
+  color: #334155;
+}
+/* ==================== استایل صفحه پذیرش سفارشات (orders.html) ==================== */
+.orders-page-container {
+  max-width: 1200px;
+  margin: 40px auto 60px auto;
+  padding: 0 20px;
+  box-sizing: border-box;
+}
+
+.orders-wrapper {
+  display: flex;
+  gap: 30px;
+  align-items: flex-start;
+}
+
+/* ستون فرم (راست) */
+.order-form-card {
+  flex: 1.4;
+  background: #ffffff;
+  border-radius: 14px;
+  padding: 35px 30px;
+  box-shadow: 0 4px 18px rgba(0, 0, 0, 0.05);
+  border: 1px solid #e2e8f0;
+  border-top: 4px solid #e67e22;
+  box-sizing: border-box;
+  text-align: right;
+}
+
+.order-form-card h3 {
+  font-size: 1.3rem;
+  color: #1e293b;
+  margin-bottom: 8px;
+  font-weight: 700;
+}
+
+.form-desc {
+  color: #64748b;
+  font-size: 0.92rem;
+  line-height: 1.7;
+  margin-bottom: 25px;
+}
+
+.form-row-2 {
+  display: flex;
+  gap: 16px;
+  margin-bottom: 0;
+}
+
+.form-row-2 .form-group {
+  flex: 1;
+}
+
+.styled-select {
+  width: 100%;
+  padding: 12px 14px;
+  border: 1.5px solid #cbd5e1;
+  border-radius: 8px;
+  font-family: inherit;
+  font-size: 0.95rem;
+  color: #1e293b;
+  background-color: #f8fafc;
+  box-sizing: border-box;
+  outline: none;
+  cursor: pointer;
+  transition: all 0.25s ease;
+}
+
+.styled-select:focus {
+  border-color: #e67e22;
+  background-color: #ffffff;
+  box-shadow: 0 0 0 3px rgba(230, 126, 34, 0.15);
+}
+
+.file-input {
+  width: 100%;
+  padding: 10px;
+  background: #f8fafc;
+  border: 1.5px dashed #cbd5e1;
+  border-radius: 8px;
+  cursor: pointer;
+  box-sizing: border-box;
+  font-family: inherit;
+  font-size: 0.88rem;
+}
+
+.file-hint {
+  display: block;
+  font-size: 0.8rem;
+  color: #94a3b8;
+  margin-top: 6px;
+}
+
+/* ستون اطلاعات و مراحل (چپ) */
+.order-info-card {
+  flex: 1;
+  background: #ffffff;
+  border-radius: 14px;
+  padding: 35px 30px;
+  box-shadow: 0 4px 18px rgba(0, 0, 0, 0.05);
+  border: 1px solid #e2e8f0;
+  border-top: 4px solid #1e293b;
+  box-sizing: border-box;
+  text-align: right;
+}
+
+.order-info-card h3 {
+  font-size: 1.25rem;
+  color: #1e293b;
+  margin-bottom: 25px;
+  font-weight: 700;
+}
+
+.step-item {
+  display: flex !important;
+  align-items: flex-start !important;
+  gap: 16px !important;
+  margin-bottom: 22px !important;
+  padding-bottom: 18px !important;
+  border-bottom: 1px dashed #e2e8f0 !important;
+}
+
+.step-item:last-of-type {
+  border-bottom: none !important;
+}
+
+.step-num {
+  width: 36px !important;
+  min-width: 36px !important;
+  height: 36px !important;
+  background-color: #1e293b !important;
+  color: #ffffff !important;
+  font-size: 1.1rem !important;
+  font-weight: 700 !important;
+  border-radius: 50% !important;
+  display: flex !important;
+  align-items: center !important;
+  justify-content: center !important;
+  margin: 0 !important;
+  flex-shrink: 0 !important;
+}
+
+.step-text {
+  flex: 1 !important;
+  text-align: right !important;
+  margin: 0 !important;
+}
+
+.step-text strong {
+  display: block !important;
+  font-size: 0.98rem !important;
+  color: #1e293b !important;
+  margin-bottom: 4px !important;
+}
+
+.step-text p {
+  color: #64748b !important;
+  font-size: 0.88rem !important;
+  line-height: 1.6 !important;
+  margin: 0 !important;
+}
+
+.order-support-box {
+  background: #fff7ed;
+  border: 1px solid #fed7aa;
+  border-radius: 10px;
+  padding: 20px;
+  margin-top: 25px;
+  text-align: center;
+}
+
+.order-support-box h4 {
+  color: #c2410c;
+  font-size: 1.05rem;
+  margin-bottom: 8px;
+}
+
+.order-support-box p {
+  color: #7c2d12;
+  font-size: 0.88rem;
+  margin-bottom: 12px;
+  line-height: 1.6;
+}
+
+.direct-call {
+  font-size: 1.25rem;
+  font-weight: 800;
+  color: #c2410c;
+  direction: ltr;
+}
+/* ==================== استایل صفحات دسته‌بندی (مانند ابزارآلات دستی) ==================== */
+/* این کلاس‌ها مشابه کلاس‌های صفحه محصولات هستند اما با نام‌های عمومی‌تر */
+
+.category-page {
+  width: 100%;
+  max-width: none; /* برای اینکه کانتینر اصلی هدر، عرض کامل بگیره */
+  margin: 0;
+  padding: 48px 40px 70px;
+  box-sizing: border-box;
+  background: #f5f6f7; /* رنگ زمینه مشابه صفحه محصولات */
+  text-align: right;
+}
+
+.category-header {
+  max-width: 1000px; /* کمی عریض‌تر از صفحه محصولات */
+  margin: 0 auto 30px;
+  padding: 26px 30px;
+  box-sizing: border-box;
+  background: #1a1f24; /* رنگ ذغالی */
+  border-right: 5px solid #e67e22; /* خط نارنجی */
+  border-radius: 12px;
+  color: #fff;
+}
+
+.category-eyebrow {
+  display: block;
+  margin: 0 0 8px;
+  color: #f0a35f; /* رنگ نارنجی ملایم‌تر */
+  font-size: 0.85rem;
+}
+
+.category-header h1 {
+  margin: 0 0 8px;
+  color: #fff;
+  font-size: 2rem; /* کمی بزرگتر از عنوان محصولات */
+}
+
+.category-header p {
+  margin: 0;
+  color: #cbd5e1;
+  line-height: 1.8;
+  font-size: 0.95rem;
+}
+
+.category-grid {
+ display: grid !important;
+  grid-template-columns: repeat(3, minmax(0, 1fr)) !important;
+  gap: 24px !important;
+  width: 100% !important;
+  max-width: 1100px !important;
+  margin: 0 auto !important;
+  box-sizing: border-box !important;
+}
+
+/* کارت‌های آیتم (مشابه product-card) */
+.item-card:link,
+.item-card:visited {
+  display: flex;
+  flex-direction: column;
+  margin: 0;
+  padding: 0;
+  overflow: hidden;
+  box-sizing: border-box;
+  background: #fff;
+  border: 1px solid #e2e8f0;
+  border-radius: 14px;
+  box-shadow: 0 5px 18px rgba(0, 0, 0, 0.07);
+  color: #1e293b;
+  text-decoration: none;
+  text-shadow: none;
+  transition: transform 0.25s ease, box-shadow 0.25s ease;
+}
+
+.item-card:hover {
+  transform: translateY(-6px);
+  box-shadow: 0 12px 26px rgba(0, 0, 0, 0.13);
+}
+.item-card {
+  width: 100% !important;
+  min-width: 0 !important;
+  box-sizing: border-box !important;
+  background: #ffffff !important;
+  border-radius: 12px !important;
+  overflow: hidden !important;
+  border: 1px solid #e2e8f0 !important;
+}
+.item-image {
+  width: 100% !important;
+  height: 220px !important; /* ارتفاع ثابت کادر */
+  overflow: hidden !important;
+  background-color: #f8fafc !important; /* رنگ زمینه ملایم پشت عکس‌های باریک/عریض */
+  display: flex !important;
+  align-items: center !important;
+  justify-content: center !important;
+  padding: 12px !important; /* یکم فاصله از لبه کادر تا چسبیده نباشه */
+  box-sizing: border-box !important;
+}
+
+.item-image img {
+  max-width: 100% !important;
+  max-height: 100% !important;
+  width: auto !important;
+  height: auto !important;
+  object-fit: contain !important; /* جادوی ماجرا: کل عکس کامل بدون برش نمایش داده میشه */
+  display: block !important;
+  margin: 0 auto !important;
+}
+
+.item-card:hover img {
+  transform: scale(1.04);
+}
+
+.item-content {
+  width: 100%;
+  margin: 0;
+  padding: 20px 22px 24px;
+  box-sizing: border-box;
+  text-align: right;
+}
+
+.item-content h2 {
+  margin: 0 0 6px;
+  color: #1e293b;
+  font-size: 1.25rem; /* کمی بزرگتر از عنوان محصول */
+  font-weight: 700;
+}
+
+.item-content p {
+  margin: 0 0 18px;
+  color: #64748b;
+  font-size: 0.9rem;
+  line-height: 1.7;
+}
+
+.item-link {
+  display: inline-block;
+  margin: 0;
+  padding: 9px 16px;
+  border-radius: 8px;
+  background: #e67e22; /* نارنجی */
+  color: #1a1f24; /* ذغالی */
+  font-size: 0.9rem;
+  font-weight: 700;
+  transition: background 0.2s ease;
+}
+
+.item-card:hover .item-link {
+  background: #d96b12; /* نارنجی تیره‌تر */
+  color: #fff;
+}
+.category-header {
+  text-align: right !important;
+}
+
+.category-header h1,
+.category-header p,
+.category-header .category-eyebrow {
+  text-align: right !important;
+}

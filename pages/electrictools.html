@@ -5,32 +5,17 @@
 <meta name="author" content="Parisa M"/>
  <link rel="stylesheet" type="text/css" href="../css/mycss.css"/>
   
-    <style>
-          
-		 .pcontact{
-			 font-size:20px;
-			 color:#09245B;
-			 text-align:right;
-			 line-height:45px;
-		 }
-		  .btn{
-			 width:100px;
-			 height:30px;
-			 font-weight:bold;
-			  transition:all 1s ease;
-		 }
-		 .btn:hover{
-			 color:#B1D9FD;
-			 background-color:#230802;
-			 transition:all 1s ease;
-			 border-radius:8px;
-		 }
-  </style>
 <title>Electric Tools</title>
 </head>
 
 <body>
   <div id="container">
+    <div class="search-section">
+  <form class="search-form" action="#" method="get">
+    <input type="text" placeholder="جستجوی نام ابزار، ژنراتور، برند..." class="search-input">
+    <button type="submit" class="search-btn">جستجو</button>
+  </form>
+</div>
     <nav>
     <ul>
      <li class="nav"><a href="../Index.html">صفحه اصلی</a></li>
@@ -49,17 +34,87 @@
 	  <li class="nav"><a href="orders.html"id="order">پذیرش سفارشات</a></li>
    </ul>
    </nav>
-   <main id="main">
-    <p class="futurp">ابزارآلات برقی</p>
-    <img src="../images/drail.jpg"class="mainimg"><div style="font-size:20px;font-weight:bold" >انواع دریل</div>
-    <img src="../images/enventor.jpg"class="mainimg"><div style="font-size:20px;font-weight:bold" >انواع اینورتور جوش</div>
-    <img src="../images/rangpash.jpg"class="mainimg"><div style="font-size:20px;font-weight:bold" >پیستوله رنگ پاش برقی</div>
-    <img src="../images/profil.jpg"class="mainimg"><div style="font-size:20px;font-weight:bold" >پروفیل برقی</div>
-    <img src="../images/ferez.jpg"class="mainimg"><div style="font-size:20px;font-weight:bold" >انواع فرز</div>
-    <img src="../images/seshoar.jpg"class="mainimg"><div style="font-size:20px;font-weight:bold" >سشوار برقی</div>
-    <img src="../images/drailhilty.jpg"class="mainimg"><div style="font-size:20px;font-weight:bold" >انوع دریل هیلتی</div>
-    <img src="../images/pomp.jpg"class="mainimg"><div style="font-size:20px;font-weight:bold;padding-bottom:30px" >انواع پمپ آب</div>
-   </main>
+    <main class="category-page">
+    <header class="category-header">
+      <span class="category-eyebrow">دسته‌بندی تجهیزات</span>
+      <h1>ابزارآلات برقی و شارژی</h1>
+      <p>انواع ابزارهای قدرتمند صنعتی، ساختمانی و کارگاهی با بالاترین توان و ضمانت معتبر</p>
+    </header>
+
+    <div class="category-grid">
+      <!-- کارت ۱: دریل -->
+      <div class="item-card">
+        <div class="item-image">
+          <img src="../images/drail.jpg" alt="دریل برقی و شارژی">
+        </div>
+        <div class="item-content">
+          <h2>دریل معمولی و چکشی</h2>
+          <p>مناسب سوراخ‌کاری چوب، فلز و مصالح با کنترل سرعت الکترونیکی.</p>
+          <span class="item-link">مشاهده مشخصات ←</span>
+        </div>
+      </div>
+
+      <!-- کارت ۲: دریل هیلتی / بتن‌کن -->
+      <div class="item-card">
+        <div class="item-image">
+          <img src="../images/drailhilty.jpg" alt="دریل بتن کن و هیلتی">
+        </div>
+        <div class="item-content">
+          <h2>بتن‌کن و دریل هیلتی</h2>
+          <p>قدرت ضربه بالا جهت تخریب سبک، سوراخ‌کاری بتن و پروژه‌های عمرانی.</p>
+          <span class="item-link">مشاهده مشخصات ←</span>
+        </div>
+      </div>
+
+      <!-- کارت ۳: دستگاه فرز -->
+      <div class="item-card">
+        <div class="item-image">
+          <img src="../images/ferez.jpg" alt="دستگاه سنگ فرز">
+        </div>
+        <div class="item-content">
+          <h2>فرز و مینی‌فرز</h2>
+          <p>دستگاه برش و ساب فلزات، سنگ و مصالح ساختمانی با دوام عالی.</p>
+          <span class="item-link">مشاهده مشخصات ←</span>
+        </div>
+      </div>
+
+      <!-- کارت ۴: اره پروفیل بر -->
+      <div class="item-card">
+        <div class="item-image">
+          <img src="../images/profil.jpg" alt="اره پروفیل بر">
+        </div>
+        <div class="item-content">
+          <h2>پروفیل‌بر صنعتی</h2>
+          <p>برش دقیق و سریع انواع قوطی، پروفیل و لوله‌های فلزی در کارگاه.</p>
+          <span class="item-link">مشاهده مشخصات ←</span>
+        </div>
+      </div>
+
+      <!-- کارت ۵: سشوار صنعتی -->
+      <div class="item-card">
+        <div class="item-image">
+          <img src="../images/seshoar.jpg" alt="سشوار صنعتی">
+        </div>
+        <div class="item-content">
+          <h2>سشوار صنعتی</h2>
+          <p>تولید حرارت بالا برای وکیوم، لایه‌برداری رنگ، فرم‌دهی و خمکاری لوله.</p>
+          <span class="item-link">مشاهده مشخصات ←</span>
+        </div>
+      </div>
+
+      <!-- کارت ۶: کمپرسور باد -->
+      <div class="item-card">
+        <div class="item-image">
+          <img src="../images/komperesor.jpg" alt="کمپرسور باد">
+        </div>
+        <div class="item-content">
+          <h2>کمپرسور باد</h2>
+          <p>تأمین باد فشرده برای ابزارهای بادی، پیستوله‌های رنگ و کارهای کارگاهی.</p>
+          <span class="item-link">مشاهده مشخصات ←</span>
+        </div>
+      </div>
+    </div>
+  </main>
 
    </div>
   <footer class="site-footer">
